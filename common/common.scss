@@ -1,0 +1,418 @@
+/**
+* Style for Category, Tag, Home Page Banners [Added by: Saurabh; Date: 06-08-2021]
+*/
+
+body{ 
+    &:not(.category.category-header){
+        .category-header-widget {
+            display: none;    
+        }
+    }
+    &:not(.tags-page.tag-banner) {
+        .tag-header-widget {
+            display: none;    
+        }
+    }
+}
+
+//Set the position of the Search and Try-free buttons in Header navigation to avoid the Overlapping.
+html:not(.anon) .d-header {
+    @media only screen and (max-width: 1050px) {
+        .header-buttons .custom-header-links .try-free-custom-header-links, .custom-header-links .try-free {
+            margin-right: -40px !important; 
+        }
+    }
+}
+html.anon .d-header {
+    @media only screen and (max-width: 1050px) {
+        .d-header-icons .search-dropdown #search-button{
+            right: 0.5em;
+        }
+    }
+    @include breakpoint("mobile-large") {
+        .d-header-icons .search-dropdown #search-button{
+            right: 0em;
+        }
+    }
+}
+
+body{ 
+    /*CSS for the Discourse Header*/
+    &:not(.archetype-regular):not(.archetype-private_message){
+        .d-header {
+            background: linear-gradient(30deg, #011F3D 0%, #3B2C5E 100%);
+            box-shadow: none !important;
+            
+            /* Setting Header SVG icons and Links colors to White*/
+            .d-header-icons li .icon 
+            {
+                svg.fa.d-icon.d-icon-trophy.svg-icon.svg-node, 
+                svg.fa.d-icon.d-icon-cog.svg-icon.svg-node, 
+                svg.fa.d-icon.d-icon-bell.svg-icon.svg-node,
+                svg.fa.d-icon.d-icon-rocket.svg-icon.svg-node, 
+                svg.fa.d-icon.d-icon-search.svg-icon.svg-node, 
+                svg.fa.d-icon.d-icon-bars.svg-icon.svg-node{
+                    color: #ffffff !important;
+                }    
+            }
+            .d-header-icons li a:not(.badge-notification):hover, .d-header-icons li a:not(.badge-notification):focus {
+                background-color: #ffffff !important; 
+                
+                svg.fa.d-icon.d-icon-trophy.svg-icon.svg-node,
+                svg.fa.d-icon.d-icon-cog.svg-icon.svg-node, 
+                svg.fa.d-icon.d-icon-bell.svg-icon.svg-node,
+                svg.fa.d-icon.d-icon-rocket.svg-icon.svg-node, 
+                svg.fa.d-icon.d-icon-search.svg-icon.svg-node, 
+                svg.fa.d-icon.d-icon-bars.svg-icon.svg-node {
+                    color: #011F3D !important;
+                    
+                }
+            }
+            .d-header-icons li.hamburger-dropdown.active .icon svg.fa.d-icon.d-icon-bars.svg-icon.svg-node, 
+            .d-header-icons li.search-dropdown.active svg.fa.d-icon.d-icon-search.svg-icon.svg-node {
+                color: #011f3de0 !important;
+            }
+            
+            // Change color for the search icon on hover
+            .d-header-icons .d-icon-search:hover, .d-header-icons #search-button:hover .d-icon-search,
+            .d-header-icons .d-icon-search:focus, .d-header-icons .d-icon-search:focus{
+                color: #011F3D !important;        
+            }
+            
+            //Set Products and Sections header links color to white for Purple navigation
+            .btn-products, .btn-sections{
+                color: #ffffff !important;
+                @include breakpoint("mobile-large") {
+                    font-size: 1.2em;
+                }
+            }
+
+            //Hide the Products and Sections header links for all devices other than desktop
+            @media only screen and (max-width: 1050px) {
+                .products, .sections-techcomm{
+                    display: none;
+                }
+            }
+
+            .products-caret, .sections-caret, .products:hover .products-caret, .sections:hover .sections-caret{
+                border-color: #FFFFFF !important;
+            }
+            
+            /* CSS for Header Try Free button and login button */
+            .header-buttons .custom-header-links .try-free-custom-header-links, .custom-header-links .try-free,
+            .header-buttons .login-button, .header-buttons .sign-up-button
+            {
+                background-color: transparent !important;
+                border: 0.5px solid #ffffff;
+                a,span{
+                    color: #ffffff !important;
+                    font-weight: bold !important;
+                }
+            }
+            
+            .header-buttons .custom-header-links .try-free-custom-header-links:hover, .custom-header-links .try-free:hover,
+            .header-buttons .login-button:hover, .header-buttons .sign-up-button:hover
+            {
+                background-color: #ffffff !important;
+                a, span{
+                    color: #011F3D !important;
+                }
+            }
+            
+            .custom-header-links .try-free, .header-buttons .login-button, .header-buttons .sign-up-button {
+                padding: 8.3px 18px 6.8px 18px !important;
+            }
+            
+            .header-buttons .custom-header-links .try-free-custom-header-links {
+                padding: 4.5px 8px 4.8px 8px !important;
+            }
+        }
+    }
+    
+    &.archetype-regular, &.archetype-private_message{
+        .try-free a {
+            font-weight: bold !important;
+            color: #011f3d !important;
+        }
+        
+        .custom-header-links .try-free {
+            padding: 8.3px 18px 6.8px 18px !important;
+            background-color: #d9ec27;
+        }
+        
+        .try-free:hover {
+            background-color: #abbb17 !important;
+            transition: all 0.25s;
+        }
+        
+    }
+    
+    //Display down arrow for the Products and Sections header links
+    .d-header {
+        .btn-products, .btn-sections{
+            float: left;
+        }
+        
+        .products:hover .products-caret, .sections:hover .sections-caret{
+            border-color:#9a50f8 !important;
+        }
+        
+        .products-caret, .sections-caret {
+            display: inline-block !important;
+            border: solid #011F3D;
+            border-width: 0 3px 3px 0;
+            padding: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            margin-bottom: 4px;
+            margin: 0px 10px 4px 10px;
+            clear: both;
+            
+        }
+    }
+    
+    /* CSS for Discourse Category Banner */
+    &.category.category-header {
+        #main>div:first-child .below-site-header-outlet.category-header-widget {
+            //position: absolute;
+            width: 100%;
+            background: linear-gradient(104deg, #011F3D 0%, #3B2C5E 100%);
+            
+            .discourse-category-banners{
+                display: block;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                
+                .category-title-header{
+                    background: none !important;
+                    color: #FFFFFF !important;
+                    max-width: calc(100% - 16px);
+                    width: 1110px;
+                    margin: auto;
+                    justify-content: left !important;
+                    align-items: center;
+                    padding: 0px !important;
+                    height: 280px;
+                }
+                
+                .category-title-contents {
+                    padding: 40px 0px;
+                    margin: 20px 0px 40px 25px;
+                    @include breakpoint("mobile-large") {
+                        padding-left: 10px !important;
+                        margin: 20px 0px 40px 0px;
+                    }
+                    text-align: left;
+                    color: #FFFFFF;
+                    display: block;
+                    float: left;
+                    min-width: 340px;
+                }
+                
+                .category-title-contents .category-title-description {
+                    font-size: 1.33em;
+                    .cooked{
+                        padding: 0px !important;
+                    }
+                }
+                
+                .category-title {
+                    font-size: 3em;
+                }
+            }
+        }
+    }
+    
+    /* CSS for Tag Page baaner */
+    &.tags-page.tag-banner {
+        .tag-header-widget{
+            //position: absolute;
+            width: 100%;
+            background: linear-gradient(104deg, #011F3D 0%, #3B2C5E 100%);
+            
+            .tag-title-header{
+                background: none !important;
+                background-repeat: no-repeat;
+                background-size:100% 100%;
+                padding-top: 0px;
+            }
+            .tag-title-header .tag-title-contents{
+                max-width: calc(100% - 16px);
+                width: 1110px;
+                margin: auto;
+                justify-content: left !important;
+                align-items: center;
+                padding: 0px !important;
+                display: flex;
+                text-align: center;
+                height: 280px;
+                
+            }
+            .tag-title-header .tag-title-contents h1{
+                font-size: 3em !important;
+                padding: 40px 0px !important;
+                margin: 20px 0px 40px 25px;
+                @include breakpoint("mobile-large") {
+                    padding-left: 10px !important;
+                    margin: 20px 0px 40px 0px;
+                }
+                text-align: left;
+                color: #FFFFFF;
+                display: block;
+                float: left;
+                min-width: 340px;
+            }
+        }
+    }
+    
+    //CSS for Tag Sidebar Banner
+    &.custom-tag-sidebar #main-outlet .discovery-list-container-top-outlet.tag-sidebar{
+        margin-left: calc(-50vw + 50.75%) !important;
+        margin-right: calc(-50vw + 50.75%) !important;
+        margin-bottom: 20px !important;
+        .tag-sidebar{
+            background: linear-gradient(104deg , #011F3D 0%, #3B2C5E 100%) !important;
+        }  
+        .sticky-sidebar{
+            min-height: 280px;
+            align-items: center;   
+            max-width: 1110px !important;
+            width: auto !important;
+            display: flex;
+            text-align: center;
+            background: none !important;
+            margin: auto;
+            justify-content: left !important;
+            padding: 0px !important;
+            .tag-sidebar-contents {
+                padding: 40px 0px !important;
+                margin: 20px 0px 40px 25px;
+                padding: 15px 20px !important;
+                margin: 20px 0px;
+                text-align: left;
+                color: black;
+                display: block;
+                float: left;
+                min-width: 340px;
+                @include breakpoint("mobile-large") {
+                    margin: 20px 0px 40px 0px;
+                }
+                background: none;
+                .cooked{
+                    padding: 0px !important;
+                    h1{
+                        color: #ffffff;
+                        font-size: 3em;
+                    } 
+                    p {
+                        color: #ffffff;
+                    }
+                }  
+            }
+        }
+    } 
+}
+
+//Home Page Banner Changes [Added by: Saurabh; Date: 23-08-2021]
+#main .custom-banner-outlet.banner {
+        background: linear-gradient(104deg , #011F3D 0%, #3B2C5E 100%);
+    .banner-box {
+        background-color: transparent !important;
+        background: none !important;
+        background-size: auto 76%;
+        background-position-x: 60vw;
+        background-position-y: 29%;
+        @include breakpoint("tablet") {
+            background-size: auto 50%;
+            background-position-x: right;
+            background-position-y: 15%;
+        }
+        // CSS to display home page banner image only upto browser 120% zoom. And adjust the position of the image for the zoom out upto 60%.
+        @media only screen and (min-width: 1100px) {
+            background-image: url($Techcommunity-banner-image) !important;
+            background-size: auto 76% !important;
+            background-position-y: 29% !important;
+            background-position-x: 60vw !important;
+            background-repeat: no-repeat !important;
+            background-color: transparent !important;
+            
+            @media only screen and (min-width: 1900px) {
+                background-position-x: 58vw !important;
+            }
+        }
+        @include breakpoint("mobile-large") {
+            background: none;
+        }
+        .container{
+            padding: 3.5em 0;
+            @include breakpoint("tablet") {
+                padding: 3em 0;
+            }
+            @include breakpoint("mobile-large") {
+                padding: 1em 0;
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            width: 1100px;
+        }
+        .section-header {
+            padding-bottom: 45px !important;
+            font-size: 3.2em;
+            max-width: 40%;
+            font-weight: 600;
+            color: #FFFFFF;
+            @include breakpoint("tablet") {
+                font-size: 3em;
+                max-width: 55%;
+            }
+            @include breakpoint("mobile-large") {
+                font-size: 2.5em;
+                max-width: 100%;
+            }
+        }
+        .row {
+            display: block !important;
+            @include breakpoint("mobile-large") {
+                .first_column, .second_column, .third_column, .fourth_column {
+                    width: 100%;
+                }
+            }
+            
+            .single-box {
+                float: left;
+                position: relative;
+                min-height: 1px;
+                padding: 0px 5px 20px;
+                @include breakpoint("mobile-large") {
+                    padding: 0px 5px 10px;
+                }
+                text-align: center;
+                a {
+                    color: #FFFFFF !important;
+                    background: transparent;
+                    border: 1px solid #FFFFFF;
+                    width: 180px;
+                    padding: 10px 5px;
+                    font-size: 1.1em;
+                    font-weight: 400;
+                }
+                a:hover {
+                    color: #011F3D !important;
+                    background-color: #FFFFFF !important;
+                    box-shadow: none !important;
+                }
+            }
+        }
+    }
+}
+
+//Resolve the responsive issue for the Tablet
+@include breakpoint("tablet") {
+    #main-outlet.wrap {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+

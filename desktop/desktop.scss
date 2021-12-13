@@ -1,0 +1,16 @@
+//CSS to change the Discourse header Logo Desktop [Added by: Saurabh; Date: 20-08-2021]
+body{ 
+    &:not(.archetype-regular):not(.archetype-private_message){
+        .title > a:first-of-type {
+            background-image: url($sag-techcommunity-white-logo);                                              
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            width: 319px;
+            height: 1.9em !important;
+            
+            img {
+                display: none !important;
+            }
+        }
+    }
+}

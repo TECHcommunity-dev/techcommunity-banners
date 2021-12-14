@@ -85,6 +85,9 @@ body{
                 @include breakpoint("mobile-large") {
                     font-size: 1.2em;
                 }
+                @include breakpoint("mobile") {
+                    font-size: 1em;
+                }
             }
 
             //Hide the Products and Sections header links for all devices other than desktop

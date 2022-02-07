@@ -1,3 +1,5 @@
+//techcommunity-banners - common.scss
+
 /**
 * Style for Category, Tag, Home Page Banners [Added by: Saurabh; Date: 06-08-2021]
 */
@@ -52,11 +54,11 @@ body{
                 svg.fa.d-icon.d-icon-rocket.svg-icon.svg-node, 
                 svg.fa.d-icon.d-icon-search.svg-icon.svg-node, 
                 svg.fa.d-icon.d-icon-bars.svg-icon.svg-node{
-                    color: #ffffff !important;
+                    color: var(--secondary) !important;
                 }    
             }
             .d-header-icons li a:not(.badge-notification):hover, .d-header-icons li a:not(.badge-notification):focus {
-                background-color: #ffffff !important; 
+                background-color: var(--secondary) !important; 
                 
                 svg.fa.d-icon.d-icon-trophy.svg-icon.svg-node,
                 svg.fa.d-icon.d-icon-cog.svg-icon.svg-node, 
@@ -81,7 +83,7 @@ body{
             
             //Set Products and Sections header links color to white for Purple navigation
             .btn-products, .btn-sections{
-                color: #ffffff !important;
+                color: var(--secondary) !important;
                 @include breakpoint("mobile-large") {
                     font-size: 1.2em;
                 }
@@ -98,7 +100,7 @@ body{
             }
 
             .products-caret, .sections-caret, .products:hover .products-caret, .sections:hover .sections-caret{
-                border-color: #FFFFFF !important;
+                border-color: var(--secondary) !important;
             }
             
             /* CSS for Header Try Free button and login button */
@@ -106,9 +108,9 @@ body{
             .header-buttons .login-button, .header-buttons .sign-up-button
             {
                 background-color: transparent !important;
-                border: 0.5px solid #ffffff;
+                border: 0.5px solid var(--secondary);
                 a,span{
-                    color: #ffffff !important;
+                    color: var(--secondary) !important;
                     font-weight: bold !important;
                 }
                 a{
@@ -119,7 +121,7 @@ body{
             .header-buttons .custom-header-links .try-free-custom-header-links:hover, .custom-header-links .try-free:hover,
             .header-buttons .login-button:hover, .header-buttons .sign-up-button:hover
             {
-                background-color: #ffffff !important;
+                background-color: var(--secondary) !important;
                 a, span{
                     color: #011F3D !important;
                 }
@@ -143,7 +145,7 @@ body{
         
         .custom-header-links .try-free {
             padding: 8.3px 18px 6.8px 18px !important;
-            background-color: #d9ec27;
+            background-color: var(--highlight);
         }
         
         .try-free:hover {
@@ -191,7 +193,7 @@ body{
                 
                 .category-title-header{
                     background: none !important;
-                    color: #FFFFFF !important;
+                    color: var(--secondary) !important;
                     max-width: calc(100% - 16px);
                     width: 1110px;
                     margin: auto;
@@ -209,7 +211,7 @@ body{
                         margin: 20px 0px 40px 0px;
                     }
                     text-align: left;
-                    color: #FFFFFF;
+                    color: var(--secondary);
                     display: block;
                     float: left;
                     min-width: 340px;
@@ -263,7 +265,7 @@ body{
                     margin: 20px 0px 40px 0px;
                 }
                 text-align: left;
-                color: #FFFFFF;
+                color: var(--secondary);
                 display: block;
                 float: left;
                 min-width: 340px;
@@ -307,11 +309,11 @@ body{
                 .cooked{
                     padding: 0px !important;
                     h1{
-                        color: #ffffff;
+                        color: var(--secondary);
                         font-size: 3em;
                     } 
                     p {
-                        color: #ffffff;
+                        color: var(--secondary);
                     }
                 }  
             }
@@ -368,7 +370,7 @@ body{
             font-size: 3.2em;
             max-width: 40%;
             font-weight: 600;
-            color: #FFFFFF;
+            color: var(--secondary);
             @include breakpoint("tablet") {
                 font-size: 3em;
                 max-width: 55%;
@@ -396,9 +398,9 @@ body{
                 }
                 text-align: center;
                 a {
-                    color: #FFFFFF !important;
+                    color: var(--secondary) !important;
                     background: transparent;
-                    border: 1px solid #FFFFFF;
+                    border: 1px solid var(--secondary);
                     width: 180px;
                     padding: 10px 5px;
                     font-size: 1.1em;
@@ -406,7 +408,7 @@ body{
                 }
                 a:hover {
                     color: #011F3D !important;
-                    background-color: #FFFFFF !important;
+                    background-color: var(--secondary) !important;
                     box-shadow: none !important;
                 }
             }

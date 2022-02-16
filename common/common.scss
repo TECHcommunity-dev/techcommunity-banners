@@ -304,6 +304,8 @@ body{
                 
                 .category-title {
                     font-size: 3em;
+                    //Fix the category title alignment issue occured after updating the discourse-category-banners component. [Added by: Saurabh; Date: 16-02-2022]
+                    justify-content: left !important; 
                 }
             }
         }

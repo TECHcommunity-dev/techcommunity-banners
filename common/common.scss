@@ -1,7 +1,7 @@
 //techcommunity-banners - common.scss
 
 /**
-* Style for Category, Tag, Home Page Banners [Added by: Saurabh; Date: 06-08-2021]
+* Style for  Header Navigation, Category, Tag, Home Page Banners [Added by: Saurabh; Date: 06-08-2021]
 */
 
 body{ 
@@ -16,6 +16,84 @@ body{
         }
     }
 }
+
+// ------ CSS Moved From The "my component - common.scss" [Date: 15-02-2022] ------------
+/*** Edit top navigation styles ***/
+//Edit top navigation search bar (Note: Currently we are using search-dropdown and not search-header)
+.d-header .title .search-header {
+    margin-top: 14px;
+}
+.d-header .title .search-header .search-icon, .d-header .search-menu input[type="text"] {
+    height: 32px;
+}
+button.widget-button.btn.search-icon.no-text.btn-icon {
+    padding: 6px 20px;
+}
+.title .search-header .search-icon, .title .search-header #search-term {
+    border: 1px solid #bababa !important;
+}
+.title .search-header .search-icon {
+    background: #fcfcfc;
+}
+//Move custom nav items to the right
+.d-header li.vdo {
+    float: right;
+}
+
+//Hide the custom nav items for anonymous users
+.anon .d-header .d-header-icons li.vdo {
+    display: none;
+}
+
+.anon .d-header .contents ul.d-header-icons {
+    margin-right: -8px;
+}
+
+.d-header .d-header-icons li.vdo .icon {
+    padding-right: 0;
+    padding-left: 0.1em;
+}
+.d-header .d-header-icons li.vdo .icon .svg-icon {
+    height: 0.95em;
+}
+.d-header .d-header-icons li.vdo .icon svg.fa.d-icon.d-icon-trophy.svg-icon.svg-node {
+    height: 0.90em;
+}
+.d-header .d-header-icons li.vdm .icon {
+    padding-left: 6px;
+    padding-right: 2px;
+    width: 1.6em;
+}
+
+//Hide subcategories in hamburger menu
+.hamburger-panel li.category-link.subcategory {
+  display:none;
+}
+//HIDE TAGS in hamburger menu for NON-STAFF
+.menu-container-general-links .widget-link[title="Tags"] {
+  display:none;
+}
+.staff .menu-container-general-links .widget-link[title="Tags"] {
+  display:block !important;
+}
+
+button.widget-button.btn.btn-primary.btn-small.sign-up-button.btn-text {
+    margin-left: 10px;
+}
+
+.menu-panel li a.widget-link, .menu-panel li.heading a.widget-link {
+    color: #011f3d;
+}
+
+.menu-panel li a.widget-link:hover {
+    color: #9a50f8;
+}
+
+.d-header-icons .unread-notifications {
+    background-color: #9a50f8 !important;
+}
+
+// ------ End of CSS Moved From The "my component" ------------
 
 //Set the position of the Search and Try-free buttons in Header navigation to avoid the Overlapping.
 html:not(.anon) .d-header {
@@ -226,6 +304,8 @@ body{
                 
                 .category-title {
                     font-size: 3em;
+                    //Fix the category title alignment issue occured after updating the discourse-category-banners component. [Added by: Saurabh; Date: 16-02-2022]
+                    justify-content: left !important; 
                 }
             }
         }
@@ -315,7 +395,32 @@ body{
                     p {
                         color: var(--secondary);
                     }
-                }  
+                }
+                //tag sidebar summary/expandable tag
+                details {
+                    display: inline-block;
+                    vertical-align: top;
+                }
+                details p {
+                    margin-top: 3px;
+                }
+                summary {
+                    color: #000000;
+                    background-color: #ffffff;
+                    padding: 8px 12px;
+                    line-height: 1.1;
+                    font-size: 1rem;
+                }
+                [data-techcommunity-product-tags] details p a {
+                    margin-bottom: 3p;
+                    margin-bottom: 2px;
+                    margin-left: 19px;
+                    padding: 6px 10px;
+                    width: 185px;
+                }
+            }
+            .tag-sidebar-webMethods .cooked {
+                text-align: left !important;
             }
         }
     } 
@@ -380,6 +485,9 @@ body{
                 max-width: 100%;
             }
         }
+        div#banner-content_wrap {
+            padding-bottom: 20px;
+        }
         .row {
             display: block !important;
             @include breakpoint("mobile-large") {
@@ -424,3 +532,16 @@ body{
     }
 }
 
+// ------ CSS Moved From The "my component - common.scss" [Date: 15-02-2022] ------------
+/*** Fix versatile banner component breaking DiscoTOC https://meta.discourse.org/t/versatile-banner/109133/125 ***/
+.d-toc-timeline {
+    overflow-x: unset;
+}
+
+.home-page-link {
+    float: left;
+}
+.home-page-link .fa-home {
+    padding: 0;
+}
+// ------ End of CSS Moved From The "my component" ------------

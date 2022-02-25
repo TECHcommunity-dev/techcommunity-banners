@@ -99,7 +99,7 @@ button.widget-button.btn.btn-primary.btn-small.sign-up-button.btn-text {
 html:not(.anon) .d-header {
     @media only screen and (max-width: 1050px) {
         .header-buttons .custom-header-links .try-free-custom-header-links, .custom-header-links .try-free {
-            margin-right: -40px !important; 
+            //margin-right: -40px !important; 
         }
     }
 }
@@ -120,6 +120,14 @@ html.anon .d-header {
 .d-header #site-logo.logo-big {
     height: 36px !important;
     margin-top: -4px;
+}
+.d-header {
+    //Hide the Products and Sections header links for all devices other than desktop
+    @media only screen and (max-width: 1050px) {
+        .products, .sections-techcomm{
+            display: none;
+        }
+    }
 }
 
 body{ 

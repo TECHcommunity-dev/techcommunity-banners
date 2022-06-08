@@ -563,3 +563,49 @@ body{
     padding: 0;
 }
 // ------ End of CSS Moved From The "my component" ------------
+
+
+//Counter Bar on Home Page CSS [Added by: Saurabh; Date: 30-05-2022]
+body {
+    &.show-counter-bar #main .below-site-header-outlet.techcommunity-counter-bar {
+        order: -1 !important;
+        display: block;
+        .counter-bar-wrapper {
+            background-color: #9a50f8;
+            .counter-bar {
+                display: flex;
+                min-height: 48px;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.1rem;
+                @include breakpoint("tablet") { 
+                    font-size: 1rem;
+                }
+                max-width: 1200px;
+                margin: auto;
+                .counter-bar-column {
+                    flex: 1 1 auto;
+                    text-align: center;
+                    border-right: 1px solid #ffffff;
+                    &:last-child {
+                        border-right: none !important;
+                    }
+                    a {
+                        color: #ffffff;
+                    
+                        &:hover {
+                            color: var(--highlight); ;
+                        }
+                    }
+                    @include breakpoint("tablet") { 
+                        padding: 3px;
+                    }
+                }
+            }
+        }
+    }
+    &:not(.show-counter-bar) #main .below-site-header-outlet.techcommunity-counter-bar{
+        display: none !important;   
+    }
+}
+

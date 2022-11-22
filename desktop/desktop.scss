@@ -2,7 +2,7 @@
 
 //CSS to change the Discourse header Logo Desktop [Added by: Saurabh; Date: 20-08-2021]
 body{ 
-    &:not(.archetype-regular):not(.archetype-private_message){
+    &:not(.archetype-regular):not(.archetype-private_message):not(.archetype-banner){
         .d-header .title > a:first-of-type {
             // Change logo [Modified by: Binjan; Date: 18-02-2022]
             background-image: url($sag-techCommunity-light);  //url($sag-techcommunity-white-logo);                                              

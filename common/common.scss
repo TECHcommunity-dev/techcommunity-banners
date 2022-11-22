@@ -128,7 +128,7 @@ html.anon .d-header {
 
 body{ 
     /*CSS for the Discourse Header*/
-    &:not(.archetype-regular):not(.archetype-private_message){
+    &:not(.archetype-regular):not(.archetype-private_message):not(.archetype-banner){
         .d-header {
             background: linear-gradient(30deg, #011F3D 0%, #3B2C5E 100%);
             box-shadow: none !important;
@@ -225,7 +225,7 @@ body{
         }
     }
     
-    &.archetype-regular, &.archetype-private_message{
+    &.archetype-regular, &.archetype-private_message, &.archetype-banner{
         .try-free a {
             font-weight: bold !important;
             color: #011f3d !important;

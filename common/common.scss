@@ -481,15 +481,17 @@ body{
             height: 100%;
             width: 1110px;
         }
-        .section-header {
-            padding-bottom: 45px !important;
+        .section-header h1 {
+            padding-bottom: 25px !important;
             font-size: 3.2em;
             max-width: 40%;
             font-weight: 600;
             color: var(--secondary);
+            text-align: left;
+            margin-bottom: 0px;
             @include breakpoint("tablet") {
                 font-size: 3em;
-                max-width: 55%;
+                max-width: 56%;
             }
             @include breakpoint("mobile-large") {
                 font-size: 2.5em;

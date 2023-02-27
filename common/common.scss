@@ -90,15 +90,6 @@ button.widget-button.btn.btn-primary.btn-small.sign-up-button.btn-text {
 }
 
 // ------ End of CSS Moved From The "my component" ------------
-
-//Set the position of the Search and Try-free buttons in Header navigation to avoid the Overlapping.
-html:not(.anon) .d-header {
-    @media only screen and (max-width: 1050px) {
-        .header-buttons .custom-header-links .try-free-custom-header-links, .custom-header-links .try-free {
-            //margin-right: -40px !important; 
-        }
-    }
-}
 html.anon .d-header {
     @media only screen and (max-width: 1050px) {
         .d-header-icons .search-dropdown #search-button{
@@ -145,7 +136,8 @@ body{
                     color: var(--secondary) !important;
                 }    
             }
-            .d-header-icons li a:not(.badge-notification):hover, .d-header-icons li a:not(.badge-notification):focus {
+            .d-header-icons li a:not(.badge-notification):hover, .d-header-icons li a:not(.badge-notification):focus,
+            .d-header-icons li button:not(.badge-notification):hover, .d-header-icons li button:not(.badge-notification):focus {
                 background-color: var(--secondary) !important; 
                 
                 svg.fa.d-icon.d-icon-trophy.svg-icon.svg-node,
@@ -163,6 +155,25 @@ body{
                 color: #011f3de0 !important;
             }
             
+            // Change for the search icon
+            #search-button {
+                background: #9a50f838;
+                border-radius: 40%;
+                border-bottom-right-radius: 0;
+                padding-bottom: 1px;
+                padding-right: 1px;
+            }
+            .search-dropdown.active #search-button {
+                background: var(--secondary) !important;
+                &::after {
+                    border-top: none !important;
+                }
+                &:hover {
+                    border-bottom: 1px solid rgba(0,0,0,0) !important;
+                }
+                
+            }
+
             // Change color for the search icon on hover
             .d-header-icons .d-icon-search:hover, .d-header-icons #search-button:hover .d-icon-search,
             .d-header-icons .d-icon-search:focus, .d-header-icons .d-icon-search:focus{
@@ -606,4 +617,3 @@ body {
         display: none !important;   
     }
 }
-

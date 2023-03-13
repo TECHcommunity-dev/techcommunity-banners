@@ -303,6 +303,7 @@ body{
                 }
                 
                 .category-title-contents {
+                    max-width: 1000px !important;
                     padding: 40px 0px;
                     margin: 20px 0px 40px 25px;
                     @include breakpoint("mobile-large") {
@@ -325,7 +326,7 @@ body{
                 
                 .category-title {
                     font-size: 3em;
-                    //Fix the category title alignment issue occured after updating the discourse-category-banners component. [Added by: Saurabh; Date: 16-02-2022]
+                    //Fix the category title alignment issue occurred after updating the discourse-category-banners component. [Added by: Saurabh; Date: 16-02-2022]
                     justify-content: left !important; 
                 }
             }
@@ -354,13 +355,13 @@ body{
                 padding: 0px !important;
                 display: flex;
                 text-align: center;
-                height: 280px;
-                
+                height: 280px;                
             }
             .tag-title-header .tag-title-contents h1{
                 font-size: 3em !important;
                 padding: 40px 0px !important;
                 margin: 20px 0px 40px 25px;
+                text-transform: uppercase;
                 @include breakpoint("mobile-large") {
                     padding-left: 10px !important;
                     margin: 20px 0px 40px 0px;
@@ -379,6 +380,7 @@ body{
         margin-left: calc(-50vw + 50.75%) !important;
         margin-right: calc(-50vw + 50.75%) !important;
         margin-bottom: 20px !important;
+        margin-top: -20px;
         .tag-sidebar{
             margin: 0px !important;
             background: linear-gradient(104deg , #011F3D 0%, #3B2C5E 100%) !important;
@@ -540,6 +542,9 @@ body{
                     padding: 10px 5px;
                     font-size: 1.1em;
                     font-weight: 400;
+                    display: block;
+                    -webkit-transition: all .3s ease;
+                    transition: all .3s ease;
                 }
                 a:hover {
                     color: #011F3D !important;

@@ -6,7 +6,7 @@
 
 body{ 
     &:not(.category.category-header){
-        .category-header-widget {
+        .category-header-banner {
             display: none;    
         }
     }
@@ -280,55 +280,49 @@ body{
     
     /* CSS for Discourse Category Banner */
     &.category.category-header {
-        #main>div:first-child .below-site-header-outlet.category-header-widget {
+        #main>div:first-child .below-site-header-outlet.category-header-banner {
             //position: absolute;
             width: 100%;
             background: linear-gradient(104deg, #011F3D 0%, #3B2C5E 100%);
+                
+            .category-title-header{
+                background: none !important;
+                color: var(--secondary) !important;
+                max-width: calc(100% - 16px);
+                width: 1110px;
+                margin: auto;
+                justify-content: left !important;
+                align-items: center;
+                padding: 0px !important;
+                height: 280px;
+            }
             
-            .discourse-category-banners{
+            .category-title-contents {
+                max-width: 1000px !important;
+                padding: 40px 0px;
+                margin: 20px 0px 40px 25px;
+                @include breakpoint("mobile-large") {
+                    padding-left: 10px !important;
+                    margin: 20px 0px 40px 0px;
+                }
+                text-align: left;
+                color: var(--secondary);
                 display: block;
-                background-repeat: no-repeat;
-                background-size: 100% 100%;
-                
-                .category-title-header{
-                    background: none !important;
-                    color: var(--secondary) !important;
-                    max-width: calc(100% - 16px);
-                    width: 1110px;
-                    margin: auto;
-                    justify-content: left !important;
-                    align-items: center;
+                float: left;
+                min-width: 340px;
+            }
+            
+            .category-title-contents .category-title-description {
+                font-size: 1.33em;
+                .cooked{
                     padding: 0px !important;
-                    height: 280px;
                 }
-                
-                .category-title-contents {
-                    max-width: 1000px !important;
-                    padding: 40px 0px;
-                    margin: 20px 0px 40px 25px;
-                    @include breakpoint("mobile-large") {
-                        padding-left: 10px !important;
-                        margin: 20px 0px 40px 0px;
-                    }
-                    text-align: left;
-                    color: var(--secondary);
-                    display: block;
-                    float: left;
-                    min-width: 340px;
-                }
-                
-                .category-title-contents .category-title-description {
-                    font-size: 1.33em;
-                    .cooked{
-                        padding: 0px !important;
-                    }
-                }
-                
-                .category-title {
-                    font-size: 3em;
-                    //Fix the category title alignment issue occurred after updating the discourse-category-banners component. [Added by: Saurabh; Date: 16-02-2022]
-                    justify-content: left !important; 
-                }
+            }
+            
+            .category-title {
+                font-size: 3em;
+                //Fix the category title alignment issue occurred after updating the discourse-category-banners component. [Added by: Saurabh; Date: 16-02-2022]
+                justify-content: left !important; 
             }
         }
     }

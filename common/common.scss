@@ -294,7 +294,9 @@ body{
                 justify-content: left !important;
                 align-items: center;
                 padding: 0px !important;
-                height: 280px;
+                @include breakpoint("tablet", min-width) {
+                    height: 280px;
+                }                
             }
             
             .category-title-contents {
@@ -323,6 +325,35 @@ body{
                 font-size: 3em;
                 //Fix the category title alignment issue occurred after updating the discourse-category-banners component. [Added by: Saurabh; Date: 16-02-2022]
                 justify-content: left !important; 
+            }
+
+            //Align the links in category banners
+            .cooked {
+                span {
+                    display: block;
+                    margin-top: 0.8em;
+                    a {
+                        color: #000;
+                        background-color: var(--primary-low);
+                        padding: 8px 12px;
+                        line-height: 1.1;
+                        vertical-align: -webkit-baseline-middle;
+                        display: inline-block;
+                        margin-bottom: 5px;
+                        text-decoration: none;
+                        font-size: 15.008px;
+
+                        &:visited {
+                            color: #000;
+                        }
+
+                        &:hover , &:focus {
+                            color: var(--secondary) !important;
+                            background: #9a50f8 !important;
+                            transition: all .3s ease;
+                        }
+                    }
+                }
             }
         }
     }

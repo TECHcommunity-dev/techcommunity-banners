@@ -10,11 +10,6 @@ body{
             display: none;    
         }
     }
-    &:not(.tags-page.tag-banner) {
-        .tag-header-widget {
-            display: none;    
-        }
-    }
 }
 
 // ------ CSS Moved From The "my component - common.scss" [Date: 15-02-2022] ------------
@@ -359,44 +354,42 @@ body{
     }
     
     /* CSS for Tag Page baaner */
-    &.tags-page.tag-banner {
-        .tag-header-widget{
-            //position: absolute;
-            width: 100%;
-            background: linear-gradient(104deg, #011F3D 0%, #3B2C5E 100%);
-            
-            .tag-title-header{
-                background: none !important;
-                background-repeat: no-repeat;
-                background-size:100% 100%;
-                padding-top: 0px;
+    .tag-header-widget{
+        //position: absolute;
+        width: 100%;
+        background: linear-gradient(104deg, #011F3D 0%, #3B2C5E 100%);
+        
+        .tag-title-header{
+            background: none !important;
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+            padding-top: 0px;
+        }
+        .tag-title-header .tag-title-contents{
+            max-width: calc(100% - 16px);
+            width: 1110px;
+            margin: auto;
+            justify-content: left !important;
+            align-items: center;
+            padding: 0px !important;
+            display: flex;
+            text-align: center;
+            height: 280px;                
+        }
+        .tag-title-header .tag-title-contents h1{
+            font-size: 3em !important;
+            padding: 40px 0px !important;
+            margin: 20px 0px 40px 25px;
+            text-transform: uppercase;
+            @include breakpoint("mobile-large") {
+                padding-left: 10px !important;
+                margin: 20px 0px 40px 0px;
             }
-            .tag-title-header .tag-title-contents{
-                max-width: calc(100% - 16px);
-                width: 1110px;
-                margin: auto;
-                justify-content: left !important;
-                align-items: center;
-                padding: 0px !important;
-                display: flex;
-                text-align: center;
-                height: 280px;                
-            }
-            .tag-title-header .tag-title-contents h1{
-                font-size: 3em !important;
-                padding: 40px 0px !important;
-                margin: 20px 0px 40px 25px;
-                text-transform: uppercase;
-                @include breakpoint("mobile-large") {
-                    padding-left: 10px !important;
-                    margin: 20px 0px 40px 0px;
-                }
-                text-align: left;
-                color: var(--secondary);
-                display: block;
-                float: left;
-                min-width: 340px;
-            }
+            text-align: left;
+            color: var(--secondary);
+            display: block;
+            float: left;
+            min-width: 340px;
         }
     }
     

@@ -38,3 +38,21 @@ html.anon .d-header .d-header-icons .search-dropdown {
     position: absolute !important;
 }
 // ------ End of CSS Moved From The "my component" ------------
+
+//Counter Bar on Home Page CSS [Added by: Saurabh; Date: 30-05-2022]
+body {
+    &.show-counter-bar #main .below-site-header-outlet.techcommunity-counter-bar {
+        .counter-bar-wrapper {
+            .counter-bar {
+                display: grid !important;
+                grid-template-columns: repeat(5, 1fr);
+                align-items: normal !important;
+                .counter-bar-column {
+                    display: grid !important;
+                    align-items: center;
+                    justify-items: center;
+                }
+            }
+        }
+    }
+}

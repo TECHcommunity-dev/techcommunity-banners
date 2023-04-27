@@ -3,34 +3,9 @@ display_counter_bar_on_home_page:
   type: bool
   description: "Display the counter bar below site header on Home page."
 
-counter_bar_column1_text:
-  default: "<strong>1500+</strong> Knowledge base"
-  description: "Text for the column 1"
-
-counter_bar_column1_link:
-  default: "/c/knowledge-base/6"
-  description: "Link for the column 1"
-
-counter_bar_column2_text:
-  default: "<strong>45 000+</strong> Forum Discussions"
-  description: "Text for the column 2"
-
-counter_bar_column2_link:
-  default: "/c/forum/1"
-  description: "Link for the column 2"
-
-counter_bar_column3_text:
-  default: "<strong>55 000+</strong> Community Experts"
-  description: "Text for the column 3"
-
-counter_bar_column3_link:
-  default: "/u?order=likes_received&period=quarterly"
-  description: "Link for the column 3"
-
-counter_bar_column4_text:
-  default: "News & Announcements"
-  description: "Text for the column 4"
-
-counter_bar_column4_link:
-  default: "/c/news/7"
-  description: "Link for the column 4"
+counter_bar_columns:
+  type: list
+  list_type: simple
+  default: "Knowledge base, /c/knowledge-base/6, book"
+  description:
+    en: "Comma delimited in this order: link text, URL, icon"

@@ -600,7 +600,7 @@ body{
 //Counter Bar on Home Page CSS [Added by: Saurabh; Date: 30-05-2022]
 body {
     &.show-counter-bar #main .below-site-header-outlet.techcommunity-counter-bar {
-        order: -1 !important;
+        order: 0 !important;
         display: block;
         .counter-bar-wrapper {
             background-color: #9a50f8;

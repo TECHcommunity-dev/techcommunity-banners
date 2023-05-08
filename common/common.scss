@@ -354,7 +354,8 @@ body{
     }
     
     /* CSS for Tag Page baaner */
-    .tag-header-widget{
+    //Modified the tag-banner CSS class after updating the discourse-tag-banners component [Modified by: Saurabh; Date: 08-05-2023]
+    .tag-banner-container{
         //position: absolute;
         width: 100%;
         background: linear-gradient(104deg, #011F3D 0%, #3B2C5E 100%);

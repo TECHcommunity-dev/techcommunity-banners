@@ -33,6 +33,7 @@ button.widget-button.btn.search-icon.no-text.btn-icon {
 //Move custom nav items to the right
 .d-header li.vdo {
     float: right;
+    order: 2;
 }
 
 //Hide the custom nav items for anonymous users

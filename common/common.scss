@@ -645,3 +645,11 @@ body {
         display: none !important;   
     }
 }
+
+/* Binjan; 2023.07.21; Hide the anniversaries and birthdays on Navigation using CSS */
+.sidebar-custom-sections .sidebar-section {
+    .sidebar-section-link-wrapper[data-list-item-name='anniversaries'],
+    .sidebar-section-link-wrapper[data-list-item-name='birthdays'] {
+        display: none;
+    }
+}

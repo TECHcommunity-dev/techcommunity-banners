@@ -113,7 +113,7 @@ html.anon .d-header {
     }
 }
 
-body{ 
+body { 
     /*CSS for the Discourse Header*/
     &:not(.archetype-regular):not(.archetype-private_message):not(.archetype-banner){
         .d-header {
@@ -197,10 +197,13 @@ body{
             .products-caret, .sections-caret, .products:hover .products-caret, .sections:hover .sections-caret{
                 border-color: var(--secondary) !important;
             }
-            
+
             /* CSS for Header Try Free button and login button */
-            .header-buttons .custom-header-links .try-free-custom-header-links, .custom-header-links .try-free,
-            .header-buttons .login-button, .header-buttons .sign-up-button
+            /* Binjan; 2023.08.22; change CSS class hierarchy for try-free-custom-header-links for staging environment */
+            .custom-header-links .try-free-custom-header-links, 
+            .custom-header-links .try-free,
+            .header-buttons .login-button, 
+            .header-buttons .sign-up-button
             {
                 background-color: transparent !important;
                 border: 0.5px solid var(--secondary);
@@ -213,8 +216,10 @@ body{
                 }
             }
             
-            .header-buttons .custom-header-links .try-free-custom-header-links:hover, .custom-header-links .try-free:hover,
-            .header-buttons .login-button:hover, .header-buttons .sign-up-button:hover
+            .custom-header-links .try-free-custom-header-links:hover, 
+            .custom-header-links .try-free:hover,
+            .header-buttons .login-button:hover, 
+            .header-buttons .sign-up-button:hover
             {
                 background-color: var(--secondary) !important;
                 a, span{
@@ -222,11 +227,13 @@ body{
                 }
             }
             
-            .custom-header-links .try-free, .header-buttons .login-button, .header-buttons .sign-up-button {
+            .custom-header-links .try-free, 
+            .header-buttons .login-button, 
+            .header-buttons .sign-up-button {
                 padding: 8.3px 18px 6.8px 18px !important;
             }
             
-            .header-buttons .custom-header-links .try-free-custom-header-links {
+            .custom-header-links .try-free-custom-header-links {
                 padding: 4.5px 8px 4.8px 8px !important;
             }
         }

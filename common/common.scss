@@ -374,31 +374,42 @@ body {
             background-size:100% 100%;
             padding-top: 0px;
         }
-        .tag-title-header .tag-title-contents{
+        .tag-title-header .tag-title-contents {
             max-width: calc(100% - 16px);
             width: 1110px;
             margin: auto;
-            justify-content: left !important;
-            align-items: center;
-            padding: 0px !important;
-            display: flex;
-            text-align: center;
-            height: 280px;                
-        }
-        .tag-title-header .tag-title-contents h1{
-            font-size: 3em !important;
-            padding: 40px 0px !important;
-            margin: 20px 0px 40px 25px;
-            text-transform: uppercase;
-            @include breakpoint("mobile-large") {
-                padding-left: 10px !important;
-                margin: 20px 0px 40px 0px;
-            }
+            justify-content: center !important;
+            align-items: flex-start; /* updated by Binjan; 2023.09.01 */
+            padding: 0px 20px 0px 0px !important;
+            display: inline-flex; /* updated by Binjan; 2023.09.01 */
+            flex-direction: column; /* added by Binjan; 2023.09.01 */
+            flex-wrap: wrap; /* added by Binjan; 2023.09.01 */ 
             text-align: left;
-            color: var(--secondary);
-            display: block;
-            float: left;
-            min-width: 340px;
+            height: 260px;     
+            color: var(--secondary);   
+            
+            h1 {
+                font-size: 3em !important;
+                /*padding: 30px 0px 0px 20px !important; 
+                margin: 10px 0px 0px 0px; */ /* removed by Binjan; 2023.09.01 */                
+                padding: 15px 0px 0px 30px; /* added by Binjan; 2023.09.12 */
+                margin-top: 20px;
+                text-transform: uppercase;
+                @include breakpoint("mobile-large") {
+                    padding-left: 10px !important;
+                    margin: 20px 0px 40px 0px;
+                }
+                text-align: left;
+                color: var(--secondary);
+                display: block;
+                /*float: left; */ /* removed by Binjan; 2023.09.01 */
+                min-width: 340px;
+            } 
+            /* added by Binjan; 2023.09.12 */
+            p {                
+                padding: 0px 0px 15px 30px;
+                margin-bottom: 20px;
+            }    
         }
     }
     
@@ -423,9 +434,9 @@ body {
             margin: auto;
             justify-content: left !important;
             padding: 0px !important;
-            .tag-sidebar-contents {
-                padding: 40px 0px !important;
-                margin: 20px 0px 40px 25px;
+            .tag-sidebar-contents {                
+                /*padding: 40px 0px !important;
+                margin: 20px 0px 40px 25px;*/ /* removed by Binjan; 2023.09.01 */
                 padding: 15px 20px !important;
                 margin: 20px 0px;
                 text-align: left;

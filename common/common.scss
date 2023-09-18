@@ -499,9 +499,25 @@ body {
     } 
 }
 
+/* Home page banner changes [Added by Binjan; 2023.09.16 */
+html {
+    &:not(.anon) {
+        #main .banner-box {
+            background-image: none !important;
+            height: 0px;
+            .section-header {
+                display: none !important;
+            }   
+        } 
+    }
+}
+
 //Home Page Banner Changes [Added by: Saurabh; Date: 23-08-2021]
-#main .custom-banner-outlet.banner {
+#main {
+    /* added by Binjan; 2023.09.16 */
+    .below-site-header-outlet.banner-themes {
         background: linear-gradient(104deg , #011F3D 0%, #3B2C5E 100%);
+    }
     .banner-box {
         background-color: transparent !important;
         background: none !important;
@@ -530,7 +546,7 @@ body {
             background: none;
         }
         .container{
-            padding: 3.5em 0;
+            padding: 2em 0; /* updated by Binjan; 2023.09.16 */
             @include breakpoint("tablet") {
                 padding: 3em 0;
             }

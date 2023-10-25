@@ -282,91 +282,104 @@ body {
     }
     
     /* CSS for Discourse Category Banner */
-    &.category.category-header {
-        #main>div:first-child .below-site-header-outlet.category-header-banner {
-            //position: absolute;
+    /*&.category.category-header {*/
+    &.category-header {                
+        .category-title-header {            
             width: 100%;
             background: linear-gradient(104deg, #011F3D 0%, #3B2C5E 100%);
-                
-            .category-title-header{
-                background: none !important;
-                color: var(--secondary) !important;
-                max-width: calc(100% - 16px);
-                width: 1110px;
-                margin: auto;
-                justify-content: left !important;
-                align-items: center;
+            color: var(--secondary) !important;
+            justify-content: left !important;
+            align-items: center;
+            padding: 0px !important;
+            @include breakpoint("tablet", min-width) {
+                height: 280px;
+            }                
+        }
+        
+        .category-title-contents {
+            width: 1110px;
+            margin: 20px auto 40px auto;
+            max-width: calc(100% - 16px);
+            padding: 40px 0px;
+            @include breakpoint("mobile-large") {
+                padding-left: 10px !important;
+                margin: 20px 0px 40px 0px;
+            }
+            text-align: left;
+            color: var(--secondary);
+            display: block;
+            float: left;
+            min-width: 340px;
+        }
+        
+        .category-title-contents .category-title-description {
+            font-size: 1.33em;
+            margin-left: 25px; /* Binjan; 2023.10.25 */
+            .cooked{
                 padding: 0px !important;
-                @include breakpoint("tablet", min-width) {
-                    height: 280px;
-                }                
             }
-            
-            .category-title-contents {
-                max-width: 1000px !important;
-                padding: 40px 0px;
-                margin: 20px 0px 40px 25px;
-                @include breakpoint("mobile-large") {
-                    padding-left: 10px !important;
-                    margin: 20px 0px 40px 0px;
-                }
-                text-align: left;
-                color: var(--secondary);
+        }
+        
+        .category-title {
+            font-size: 3em;
+            //Fix the category title alignment issue occurred after updating the discourse-category-banners component. [Added by: Saurabh; Date: 16-02-2022]
+            justify-content: left !important; 
+            margin-left: 25px; /* Binjan; 2023.10.25 */
+
+            /* Added by Binjan; 2023.10.25; remove background when tag inside category header  */
+            .tag-banner-container {
+                background: none;
+            }
+        }
+
+        //Align the links in category banners
+        .cooked {
+            span {
                 display: block;
-                float: left;
-                min-width: 340px;
-            }
-            
-            .category-title-contents .category-title-description {
-                font-size: 1.33em;
-                .cooked{
-                    padding: 0px !important;
-                }
-            }
-            
-            .category-title {
-                font-size: 3em;
-                //Fix the category title alignment issue occurred after updating the discourse-category-banners component. [Added by: Saurabh; Date: 16-02-2022]
-                justify-content: left !important; 
-            }
+                margin-top: 0.8em;
+                a {
+                    color: #000;
+                    background-color: var(--primary-low);
+                    padding: 8px 12px;
+                    line-height: 1.1;
+                    vertical-align: -webkit-baseline-middle;
+                    display: inline-block;
+                    margin-bottom: 5px;
+                    text-decoration: none;
+                    font-size: 15.008px;
 
-            //Align the links in category banners
-            .cooked {
-                span {
-                    display: block;
-                    margin-top: 0.8em;
-                    a {
+                    &:visited {
                         color: #000;
-                        background-color: var(--primary-low);
-                        padding: 8px 12px;
-                        line-height: 1.1;
-                        vertical-align: -webkit-baseline-middle;
-                        display: inline-block;
-                        margin-bottom: 5px;
-                        text-decoration: none;
-                        font-size: 15.008px;
+                    }
 
-                        &:visited {
-                            color: #000;
-                        }
-
-                        &:hover , &:focus {
-                            color: var(--secondary) !important;
-                            background: #9a50f8 !important;
-                            transition: all .3s ease;
-                        }
+                    &:hover , &:focus {
+                        color: var(--secondary) !important;
+                        background: #9a50f8 !important;
+                        transition: all .3s ease;
                     }
                 }
             }
         }
     }
+
+    /* Added by Binjan; 2023.10.25; Hide category description on Category Tag page */
+    &.category-header.tags-page {
+        .category-title-description {
+            display: none;
+        }
+    }
     
     /* CSS for Tag Page baaner */
     //Modified the tag-banner CSS class after updating the discourse-tag-banners component [Modified by: Saurabh; Date: 08-05-2023]
-    .tag-banner-container{
-        //position: absolute;
+    .tag-banner-container {
         width: 100%;
         background: linear-gradient(104deg, #011F3D 0%, #3B2C5E 100%);
+
+        /* Added by Binjan; 2023.10.25 */
+        .tag-banner__text-only {
+            align-items: flex-start;
+            justify-content: left;
+        }
         
         .tag-title-header{
             background: none !important;
@@ -429,8 +442,8 @@ body {
     
     //CSS for Tag Sidebar Banner
     &.custom-tag-sidebar #main-outlet .discovery-list-container-top-outlet.tag-sidebar{
-        margin-left: calc(-50vw + 50.75%) !important;
-        margin-right: calc(-50vw + 50.75%) !important;
+        margin-left: calc(-50vw + 40%) !important; /* Updated by Binjan; 2023.10.25 */
+        margin-right: calc(-50vw + 40%) !important;
         margin-bottom: 20px !important;
         margin-top: -20px;
         .tag-sidebar{
@@ -508,7 +521,10 @@ html {
         #main .banner-box {
             background-image: none !important;
             height: 0px;
-            .section-header {
+            /* Added by Binjan; 2023.10.25 */
+            .section-header, 
+            #banner-content_wrap,
+            .container {
                 display: none !important;
             }   
         } 
@@ -521,11 +537,25 @@ html {
     .below-site-header-outlet.banner-themes {
         background: linear-gradient(104deg , #011F3D 0%, #3B2C5E 100%);
     }
+    /* Added by Binjan; 2023.10.25; After discourse update on 2023.10.24; control hierarchy is changed 
+       and update CSS to adjust the components */
     .banner-box {
+        background: linear-gradient(104deg, #011F3D 0%, #3B2C5E 100%);
+        order: -1;
+    }
+
+    /* Updated by Binjan; 2023.10.25 */
+    .banner-box .container {
+        padding: 2em 0; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 1110px;
         background-color: transparent !important;
         background: none !important;
-        background-size: auto 76%;
-        background-position-x: 60vw;
+        background-size: auto 96%;
+        background-position-x: 50vw;
         background-position-y: 29%;
         @include breakpoint("tablet") {
             background-size: auto 50%;
@@ -534,22 +564,22 @@ html {
         }
         // CSS to display home page banner image only upto browser 120% zoom. And adjust the position of the image for the zoom out upto 60%.
         @media only screen and (min-width: 1100px) {
-            background-image: url($Techcommunity-banner-image) !important;
+            background-image: url($Techcommunity-banner-image) !important; 
             background-size: auto 76% !important;
             background-position-y: 29% !important;
-            background-position-x: 60vw !important;
+            background-position-x: 52vw !important;
             background-repeat: no-repeat !important;
             background-color: transparent !important;
             
             @media only screen and (min-width: 1900px) {
-                background-position-x: 58vw !important;
+                background-position-x: 35vw !important;
             }
         }
         @include breakpoint("mobile-large") {
             background: none;
         }
-        .container{
-            padding: 2em 0; /* updated by Binjan; 2023.09.16 */
+        /*.container {
+            padding: 2em 0; 
             @include breakpoint("tablet") {
                 padding: 3em 0;
             }
@@ -561,7 +591,7 @@ html {
             justify-content: center;
             height: 100%;
             width: 1110px;
-        }
+        }*/
         .section-header h1 {
             padding-bottom: 25px !important;
             font-size: 3.2em;

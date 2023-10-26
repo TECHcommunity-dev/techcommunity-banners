@@ -379,6 +379,16 @@ body {
         .tag-banner__text-only {
             align-items: flex-start;
             justify-content: left;
+            font-size: 2.5rem;
+            /* Binjan; 2023.10.26; update category tag page header CSS */
+            &::before {
+                content: "/ ";
+                background: transparent !important;
+            }          
+
+            .discourse-tag.box {
+                box-shadow: none;
+            } 
         }
         
         .tag-title-header{

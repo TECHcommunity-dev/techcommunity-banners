@@ -52,68 +52,6 @@ export default createWidget("techcommunity-counter-bar-widget", {
                 });
                 
             return h(`div.counter-bar`, links);
-
-            /*
-            return h(
-                `div.counter-bar`, [
-                    h("div.counter-bar-column.column1", 
-                        h("a.column_link", 
-                            { 
-                                
-                                href: settings.counter_bar_column1_link
-                            }, [
-                                h("span.category-icon", {}, settings.counter_bar_column1_icon !== "" ? iconNode(settings.counter_bar_column1_icon) : ""),
-                                h("span", { innerHTML: settings.counter_bar_column1_text })
-                            ]
-                        )
-                    ),
-                    h("div.counter-bar-column.column2", 
-                        h("a.column_link", 
-                            { 
-                                    
-                                href: settings.counter_bar_column2_link
-                            }, [
-                                h("span.category-icon", {}, settings.counter_bar_column2_icon !== "" ? iconNode(settings.counter_bar_column2_icon) : ""),
-                                h("span", { innerHTML: settings.counter_bar_column2_text })
-                            ]
-                        )
-                    ),
-                    h("div.counter-bar-column.column3", 
-                        h("a.column_link", 
-                            { 
-                                    
-                                href: settings.counter_bar_column3_link
-                            }, [
-                                h("span.category-icon", {}, settings.counter_bar_column3_icon !== "" ? iconNode(settings.counter_bar_column3_icon) : ""),
-                                h("span", { innerHTML: settings.counter_bar_column3_text })
-                            ]
-                        )
-                    ),
-                    h("div.counter-bar-column.column4", 
-                        h("a.column_link", 
-                            { 
-                                    
-                                href: settings.counter_bar_column4_link
-                            }, [
-                                h("span.category-icon", {}, settings.counter_bar_column4_icon !== "" ? iconNode(settings.counter_bar_column4_icon) : ""),
-                                h("span", { innerHTML: settings.counter_bar_column4_text })
-                            ]
-                        )
-                    ),
-                    h("div.counter-bar-column.column4", 
-                        h("a.column_link", 
-                            { 
-                                    
-                                href: settings.counter_bar_column5_link
-                            }, [
-                                h("span.category-icon", {}, settings.counter_bar_column5_icon !== "" ? iconNode(settings.counter_bar_column5_icon) : ""),
-                                h("span", { innerHTML: settings.counter_bar_column5_text })
-                            ]
-                        )
-                    )
-                ]
-            );
-            */
         }
         else {
             //Do not display Counter bar

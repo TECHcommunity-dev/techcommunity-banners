@@ -117,35 +117,8 @@ body {
     /*CSS for the Discourse Header*/
     &:not(.archetype-regular):not(.archetype-private_message):not(.archetype-banner){
         .d-header {
-            background: linear-gradient(30deg, #011F3D 0%, #3B2C5E 100%);
             box-shadow: none !important;
             
-            /* Setting Header SVG icons and Links colors to White*/
-            .d-header-icons li .icon 
-            {
-                svg.fa.d-icon.d-icon-trophy.svg-icon.svg-node, 
-                svg.fa.d-icon.d-icon-cog.svg-icon.svg-node, 
-                svg.fa.d-icon.d-icon-bell.svg-icon.svg-node,
-                svg.fa.d-icon.d-icon-rocket.svg-icon.svg-node, 
-                svg.fa.d-icon.d-icon-search.svg-icon.svg-node, 
-                svg.fa.d-icon.d-icon-bars.svg-icon.svg-node{
-                    color: var(--secondary) !important;
-                }    
-            }
-            .d-header-icons li a:not(.badge-notification):hover, .d-header-icons li a:not(.badge-notification):focus,
-            .d-header-icons li button:not(.badge-notification):hover, .d-header-icons li button:not(.badge-notification):focus {
-                background-color: var(--secondary) !important; 
-                
-                svg.fa.d-icon.d-icon-trophy.svg-icon.svg-node,
-                svg.fa.d-icon.d-icon-cog.svg-icon.svg-node, 
-                svg.fa.d-icon.d-icon-bell.svg-icon.svg-node,
-                svg.fa.d-icon.d-icon-rocket.svg-icon.svg-node, 
-                svg.fa.d-icon.d-icon-search.svg-icon.svg-node, 
-                svg.fa.d-icon.d-icon-bars.svg-icon.svg-node {
-                    color: #011F3D !important;
-                    
-                }
-            }
             .d-header-icons li.hamburger-dropdown.active .icon svg.fa.d-icon.d-icon-bars.svg-icon.svg-node, 
             .d-header-icons li.search-dropdown.active svg.fa.d-icon.d-icon-search.svg-icon.svg-node {
                 color: #011f3de0 !important;
@@ -153,9 +126,6 @@ body {
             
             // Change for the search icon
             #search-button {
-                background: #9a50f838;
-                border-radius: 40%;
-                border-bottom-right-radius: 0;
                 padding-bottom: 1px;
                 padding-right: 1px;
             }
@@ -178,7 +148,6 @@ body {
             
             //Set Products and Sections header links color to white for Purple navigation
             .btn-products, .btn-sections{
-                color: var(--secondary) !important;
                 @include breakpoint("mobile-large") {
                     font-size: 1.2em;
                 }
@@ -194,21 +163,14 @@ body {
                 }
             }
 
-            .products-caret, .sections-caret, .products:hover .products-caret, .sections:hover .sections-caret{
-                border-color: var(--secondary) !important;
-            }
-
             /* CSS for Header Try Free button and login button */
             /* Binjan; 2023.08.22; change CSS class hierarchy for try-free-custom-header-links for staging environment */
-            .custom-header-links .try-free-custom-header-links, 
             .custom-header-links .try-free,
             .header-buttons .login-button, 
             .header-buttons .sign-up-button
             {
-                background-color: transparent !important;
                 border: 0.5px solid var(--secondary);
                 a,span{
-                    color: var(--secondary) !important;
                     font-weight: bold !important;
                 }
                 a{
@@ -216,25 +178,10 @@ body {
                 }
             }
             
-            .custom-header-links .try-free-custom-header-links:hover, 
-            .custom-header-links .try-free:hover,
-            .header-buttons .login-button:hover, 
-            .header-buttons .sign-up-button:hover
-            {
-                background-color: var(--secondary) !important;
-                a, span{
-                    color: #011F3D !important;
-                }
-            }
-            
             .custom-header-links .try-free, 
             .header-buttons .login-button, 
             .header-buttons .sign-up-button {
                 padding: 8.3px 18px 6.8px 18px !important;
-            }
-            
-            .custom-header-links .try-free-custom-header-links {
-                padding: 4.5px 8px 4.8px 8px !important;
             }
         }
     }
@@ -263,7 +210,7 @@ body {
             float: left;
         }
         
-        .products:hover .products-caret, .sections:hover .sections-caret{
+        .products:hover .products-caret, .sections:hover .sections-caret {
             border-color:#9a50f8 !important;
         }
         

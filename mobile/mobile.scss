@@ -4,7 +4,7 @@
 body{ 
     &:not(.archetype-regular):not(.archetype-private_message):not(.archetype-banner){
         .title > a:first-of-type {
-            background-image: url($sag-techcommunity-small-white-logo);                                      
+            background-image: url($sag-techcommunity-small-grey-logo);                                      
             background-size: auto 100%;
             background-repeat: no-repeat;
             width: 36px;
@@ -55,4 +55,9 @@ body {
             }
         }
     }
+}
+
+.products .products-caret,
+.sections .sections-caret {
+    border-color: #787878 !important;
 }

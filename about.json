@@ -9,9 +9,11 @@
   "maximum_discourse_version": null,
   "assets": {
     "sag-techcommunity-small-white-logo": "assets/sag-techcommunity-small-white-logo.png",
+    "sag-techcommunity-small-grey-logo": "assets/sag-techcommunity-small-grey-logo.png",
     "sag-techcommunity-white-logo": "assets/sag-techcommunity-white-logo.png",
-    "Techcommunity-banner-image": "assets/Techcommunity-banner-image.png",
-    "sag-techCommunity-light": "assets/SoftwareAG-TechCommunity-light.svg"
+    "sag-techCommunity-light": "assets/SoftwareAG-TechCommunity-light.svg",
+    "sag-techCommunity-dark": "assets/SoftwareAG-TechCommunity-dark.svg",
+    "Techcommunity-banner-image": "assets/Techcommunity-banner-image.png"
   },
   "color_schemes": {
   },

@@ -61,3 +61,17 @@ body {
 .sections .sections-caret {
     border-color: #787878 !important;
 }
+
+// Changes menu icon display [Added by: Binjan; Date: 2023/12/29]
+body {
+    &.show-counter-bar #main .below-site-header-outlet.techcommunity-counter-bar {
+        .counter-bar-wrapper .counter-bar .category-icon {
+            display: block;
+        }
+    }    
+}
+
+// hide humbuger menu [Added by: Binjan; Date: 2023/12/29]
+.d-header .brand-header-toggle {
+    display: none;
+}

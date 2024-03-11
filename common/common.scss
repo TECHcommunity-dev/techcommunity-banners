@@ -472,22 +472,6 @@ body {
     } 
 }
 
-/* Home page banner changes [Added by Binjan; 2023.09.16 */
-html {
-    &:not(.anon) {
-        #main .banner-box {
-            background-image: none !important;
-            height: 0px;
-            /* Added by Binjan; 2023.10.25 */
-            .section-header, 
-            #banner-content_wrap,
-            .container {
-                display: none !important;
-            }   
-        } 
-    }
-}
-
 //Home Page Banner Changes [Added by: Saurabh; Date: 23-08-2021]
 #main {
     /* added by Binjan; 2023.09.16 */

@@ -21,8 +21,8 @@ body{
 .d-header .title .search-header .search-icon, .d-header .search-menu input[type="text"] {
     height: 32px;
 }
-button.widget-button.btn.search-icon.no-text.btn-icon {
-    padding: 6px 20px;
+/*** button.widget-button.btn.search-icon.no-text.btn-icon {
+    padding: 6px 20px;  ***/
 }
 .title .search-header .search-icon, .title .search-header #search-term {
     border: 1px solid #bababa !important;
@@ -62,7 +62,7 @@ button.widget-button.btn.search-icon.no-text.btn-icon {
   display:none;
 }
 //HIDE TAGS in hamburger menu for NON-STAFF
-.menu-container-general-links .widget-link[title="Tags"] {
+/** .menu-container-general-links .widget-link[title="Tags"] {
   display:none;
 }
 .staff .menu-container-general-links .widget-link[title="Tags"] {
@@ -79,7 +79,7 @@ button.widget-button.btn.btn-primary.btn-small.sign-up-button.btn-text {
 
 .menu-panel li a.widget-link:hover {
     color: #9a50f8;
-}
+} **/
 
 .d-header-icons .unread-notifications {
     background-color: #9a50f8 !important;
@@ -674,4 +674,5 @@ body {
         display: none;
     }
 }
+
 

@@ -497,7 +497,7 @@ body {
         width: 1110px;
         background-color: transparent !important;
         background: none !important;
-        background-size: auto 96%;
+        background-size: 100%;
         background-position-x: right;
         background-position-y: 29%;
         @include breakpoint("tablet") {
@@ -674,5 +674,6 @@ body {
         display: none;
     }
 }
+
 
 

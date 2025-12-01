@@ -515,7 +515,7 @@ body {
             background-color: transparent !important;
             
             @media only screen and (min-width: 1900px) {
-                background-position-x: left !important;
+                background-position-x: 80% !important;
             }
         }
         @include breakpoint("mobile-large") {
@@ -674,6 +674,7 @@ body {
         display: none;
     }
 }
+
 
 
 

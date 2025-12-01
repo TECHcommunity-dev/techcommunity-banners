@@ -508,9 +508,9 @@ body {
         // CSS to display home page banner image only upto browser 120% zoom. And adjust the position of the image for the zoom out upto 60%.
         @media only screen and (min-width: 1100px) {
             background-image: url($Techcommunity-banner-image) !important; 
-            background-size: auto 76% !important;
+            background-size: auto !important;
             background-position-y: 29% !important;
-            background-position-x: 80% !important;
+            background-position-x: right !important;
             background-repeat: no-repeat !important;
             background-color: transparent !important;
             
@@ -674,6 +674,7 @@ body {
         display: none;
     }
 }
+
 
 
 

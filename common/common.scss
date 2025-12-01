@@ -498,11 +498,11 @@ body {
         background-color: transparent !important;
         background: none !important;
         background-size: auto 96%;
-        background-position-x: 50vw;
+        background-position-x: right;
         background-position-y: 29%;
         @include breakpoint("tablet") {
             background-size: auto 50%;
-            background-position-x: 80%;
+            background-position-x: right;
             background-position-y: 15%;
         }
         // CSS to display home page banner image only upto browser 120% zoom. And adjust the position of the image for the zoom out upto 60%.
@@ -674,4 +674,5 @@ body {
         display: none;
     }
 }
+
 
